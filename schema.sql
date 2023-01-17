@@ -8,3 +8,6 @@ create table if not exists animals (
   neutered boolean not null,
   weight_kg decimal not null
 );
+
+alter table animals
+add column species varchar(100);

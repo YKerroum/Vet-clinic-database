@@ -1,9 +1,5 @@
 # curriculum-databases-projects-template
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
-
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
@@ -65,9 +61,12 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [your_project_name] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+**[Vet clinic database]** is a relational database for a vet clinic.It is a complete database with data about:
 
-**[your_project__name]** is a...
+- animals
+- animals' owners
+- clinic employees
+- visits
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -75,19 +74,6 @@ After you're finished please remove all the comments and instructions!
 
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
 
 <details>
 <summary>Database</summary>
@@ -208,17 +194,12 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Youssef**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/YKerroum)
+- Twitter: [@twitterhandle](https://twitter.com/kerroum_youssef)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ykerroum/)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

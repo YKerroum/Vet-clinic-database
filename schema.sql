@@ -11,3 +11,35 @@ create table if not exists animals (
 
 alter table animals
 add column species varchar(100);
+
+create table if not exists owners (
+id int primary key GENERATED always as IDENTITY,
+full_name varchar(100) not null,
+age int not null
+);
+
+create table if not exists species (
+id int primary key GENERATED always as IDENTITY,
+name varchar(100) not null
+);
+
+do $$
+begin
+if NOT exists (select constraint_name from information_schema.table_constraints where table_name = 'animals' and constraint_type = 'PRIMARY KEY') OR (select is_identity  from information_schema.columns where table_name = 'animals' and column_name= 'id') != 'YES' then
+ALTER TABLE animals
+ADD PRIMARY KEY (id);
+alter table animals
+ALTER COLUMN id SET GENERATED ALWAYS;
+end if;
+end $$;
+
+alter table animals
+drop column species;
+
+alter table animals
+add column species_id int references species(id); 
+
+alter table animals
+add column owner_id int references owners(id);
+
+

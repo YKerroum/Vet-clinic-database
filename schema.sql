@@ -60,6 +60,6 @@ create table if not exists visits (
 animal_id int references animals(id),
 veterinarian_id int references vets(id),
 date_of_visit date not null,
-primary key (animal_id,veterinarian_id)
+primary key (animal_id,veterinarian_id,date_of_visit)
 );
 

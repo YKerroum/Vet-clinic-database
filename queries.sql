@@ -86,3 +86,56 @@ from owners left join animals on owners.id=animals.owner_id
 group by owners.full_name
 order by number_of_animals desc
 limit 1;
+
+select animals.name as animal_name
+from animals inner join visits on animals.id= visits.animal_id
+inner join vets on visits.veterinarian_id=vets.id
+where vets.name= 'William Tatcher'
+order by visits.date_of_visit desc
+limit 1;
+
+select count(distinct visits.animal_id) as number_of_different_animals_seen
+from visits inner join vets on vets.id= visits.veterinarian_id
+where vets.name= 'Stephanie Mendez';
+
+select vets.name as veterinarian_name, specializations.species_id as specialization
+from vets left join specializations on vets.id= specializations.veterinarian_id;
+
+select animals.name as animal_name
+from animals inner join visits on animals.id= visits.animal_id
+inner join vets on visits.veterinarian_id=vets.id
+where vets.name= 'Stephanie Mendez' and visits.date_of_visit between '2020-04-01' and '2020-08-30';
+
+select animals.name as animal_name, count(*) as number_of_visits
+from animals inner join visits on animals.id= visits.animal_id
+group by animals.name
+order by number_of_visits desc
+limit 1;
+
+select animals.name as animal_name
+from animals inner join visits on animals.id= visits.animal_id
+inner join vets on visits.veterinarian_id=vets.id
+where vets.name= 'Maisy Smith'
+order by visits.date_of_visit
+limit 1;
+
+select animals.name as animal_name, animals.date_of_birth as animal_date_of_birth, animals.escape_attempts as animal_escape_attempts,
+animals.neutered as animal_neutered, animals.weight_kg as animal_weight, vets.name as vet_name, vets.age as vet_age, vets.date_of_graduation as vet_date_of_graduation, visits.date_of_visit as date_of_visit from 
+animals inner join visits on animals.id = visits.animal_id
+inner join vets on vets.id = visits.veterinarian_id
+order by date_of_visit desc
+limit 1;
+
+select count(*) as number_of_visits
+from animals inner join visits on animals.id= visits.animal_id
+inner join vets as v on v.id= visits.veterinarian_id
+where animals.species_id not in (select species_id from specializations where veterinarian_id = v.id);
+
+select species.name as species_name, count(*) as number_of_visits
+from animals inner join species on animals.species_id= species.id
+inner join visits on visits.animal_id =  animals.id
+inner join vets on vets.id= visits.veterinarian_id
+where vets.name= 'Maisy Smith'
+group by species.name
+order by number_of_visits desc
+limit 1;

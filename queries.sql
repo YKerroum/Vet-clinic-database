@@ -98,8 +98,9 @@ select count(distinct visits.animal_id) as number_of_different_animals_seen
 from visits inner join vets on vets.id= visits.veterinarian_id
 where vets.name= 'Stephanie Mendez';
 
-select vets.name as veterinarian_name, specializations.species_id as specialization
-from vets left join specializations on vets.id= specializations.veterinarian_id;
+select vets.name as veterinarian_name, species.name as specialization_name
+from vets left join specializations on vets.id= specializations.veterinarian_id
+left join species on specializations.species_id= species.id;
 
 select animals.name as animal_name
 from animals inner join visits on animals.id= visits.animal_id

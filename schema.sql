@@ -53,13 +53,11 @@ primary key (id)
 create table if not exists specializations (
 species_id int references species(id),
 veterinarian_id int references vets(id),
-primary key (species_id,veterinarian_id)
 );
 
 create table if not exists visits (
 animal_id int references animals(id),
 veterinarian_id int references vets(id),
 date_of_visit date not null,
-primary key (animal_id,veterinarian_id,date_of_visit)
 );
 

@@ -61,3 +61,10 @@ veterinarian_id int references vets(id),
 date_of_visit date not null,
 );
 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+create index animal_id_index on visits(animal_id);
+
+create index vet_id_index on visits(veterinarian_id,animal_id, date_of_visit);
+
+create index email_index on owners(email);

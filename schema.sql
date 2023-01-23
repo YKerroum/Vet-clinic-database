@@ -62,3 +62,7 @@ date_of_visit date not null,
 );
 
 create index animal_id_index on visits(animal_id);
+
+create index vet_id_index on visits(veterinarian_id,animal_id, date_of_visit);
+
+create index email_index on owners(email);

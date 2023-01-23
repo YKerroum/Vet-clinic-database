@@ -61,3 +61,4 @@ veterinarian_id int references vets(id),
 date_of_visit date not null,
 );
 
+create index animal_id_index on visits(animal_id);

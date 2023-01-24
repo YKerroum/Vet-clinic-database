@@ -112,6 +112,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@twitterhandle](#)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hevar-hoshang-9a7a68237/)
 
+👤 **Marianela Muñoz Gutierrez**
+
+- GitHub: [@githubhandle](https://github.com/Nelitaa)
+- Twitter: [@twitterhandle](https://twitter.com/MarianelaMunoz_)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/marianela-munoz/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->

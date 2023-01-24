@@ -24,6 +24,8 @@ REQUIRED SECTIONS:
 After you're finished please remove all the comments and instructions!
 -->
 
+![vet_clinic_ERD](https://user-images.githubusercontent.com/78832703/214374804-18db5b11-b7f1-4a5c-9234-a30c42adda40.jpg)
+
 
 <!-- TABLE OF CONTENTS -->
 
